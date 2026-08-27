@@ -2,58 +2,80 @@
 
 Repositorio oficial y entorno de laboratorio interactivo para el curso de **Desarrollo de Aplicaciones Web** del Tecnológico Nacional de México / Instituto Tecnológico de Cancún.
 
+**Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)
+
 ---
 
 ## 🚀 Flujo de Trabajo en la Nube (100% en Navegador)
-
-1. **Crear tu copia de trabajo:** Haz clic en el botón **`Fork`** (arriba a la derecha) para duplicar este repositorio en tu cuenta personal.
-2. **Identifícate:** Edita el archivo `README.md` de tu Fork colocando tu nombre completo, matrícula y track seleccionado (**Python/FastAPI** o **PHP 8+**).
-3. **Ejecutar Laboratorios:** Haz clic en los botones **"Open in Colab"** correspondientes a cada sesión.
-4. **Auditoría IA:** Copia la plantilla correspondiente desde `plantillas/`, crea tu archivo en `auditorias/` y documenta tu bitácora crítica antes de realizar el commit.
+1. Realiza un **Fork** de este repositorio a tu cuenta personal de GitHub.
+2. Identifícate editando este `README.md` con tu nombre, matrícula y track (**Python/FastAPI** o **PHP 8+**).
+3. Abre la sesión correspondiente con el botón **Open in Colab**.
+4. Sigue el ciclo **El Artesano** $\to$ **El Científico** $\to$ **El Auditor**.
+5. Copia la plantilla de `plantillas/auditoria_sesionXX.md` a `auditorias/auditoria_sesionXX.md` en tu Fork y realiza el commit.
 
 ---
 
-## 📚 Módulos y Sesiones
+## 🏗️ Proyecto Integrador Semestral (30%)
+* **Hito 1 (Sesión 10):** Mock API RESTful con Especificación OpenAPI y Validation Harness.
+* **Hito 2 (Sesión 20):** API con Inyección de Dependencias, Autenticación JWT y Roles (RBAC).
+* **Hito 3 (Sesión 30):** API Persistente con Base de Datos Relacional, Migraciones y Blindaje OWASP.
+* **Hito 4 (Sesión 40):** Demostración API Full-Stack Desplegada en Producción con Client Frontend.
 
-### Bloque 1: Arquitectura Web, Protocolo HTTP y APIs
+---
 
-| Sesión | Tema Principal | Presentación Interactiva | Cuaderno de Laboratorio |
+## 📚 Índice General de las 40 Sesiones
+
+| Sesión | Tema Principal | Presentación | Laboratorio |
 | :--- | :--- | :---: | :---: |
-| **Sesión 01** | Encuadre, Anatomía HTTP (Request/Response) y Primer Servidor | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion01.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion01/sesion01_laboratorio.ipynb) |
+| **Sesión 01** | Encuadre, Diagnóstico HTTP y Servidor en Colab | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion01.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion01/sesion01_laboratorio.ipynb) |
+| **Sesión 02** | Gestión en GitHub Web y Métodos HTTP (GET, POST, PUT, DELETE) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion02.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion02/sesion02_laboratorio.ipynb) |
+| **Sesión 03** | Headers, Content-Type y Negociación de Contenido | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion03.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion03/sesion03_laboratorio.ipynb) |
+| **Sesión 04** | Anatomía RESTful, URIs Nombres y Recursos | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion04.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion04/sesion04_laboratorio.ipynb) |
+| **Sesión 05** | Pydantic v2 / DTOs en PHP y Tipado Estático | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion05.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion05/sesion05_laboratorio.ipynb) |
+| **Sesión 06** | Validación Estricta, Constraints y Params Query/Body | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion06.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion06/sesion06_laboratorio.ipynb) |
+| **Sesión 07** | Especificación OpenAPI (Swagger) y ReDoc | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion07.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion07/sesion07_laboratorio.ipynb) |
+| **Sesión 08** | Respuestas Semánticas y Excepciones HTTP Personalizadas | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion08.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion08/sesion08_laboratorio.ipynb) |
+| **Sesión 09** | Middleware Web, Intercepción y Logging de Transacciones | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion09.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion09/sesion09_laboratorio.ipynb) |
+| **Sesión 10** | Hito 1: Mock API RESTful con OpenAPI y Validation Harness | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion10.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion10/sesion10_laboratorio.ipynb) |
+| **Sesión 11** | Arquitectura en Capas: Router, Servicio y Capa de Datos | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion11.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion11/sesion11_laboratorio.ipynb) |
+| **Sesión 12** | Inyección de Dependencias (FastAPI Depends / PHP Container) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion12.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion12/sesion12_laboratorio.ipynb) |
+| **Sesión 13** | Manejo de Sesiones Stateful vs Stateless Tokens | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion13.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion13/sesion13_laboratorio.ipynb) |
+| **Sesión 14** | Hashing Seguro de Contraseñas (Bcrypt / Argon2) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion14.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion14/sesion14_laboratorio.ipynb) |
+| **Sesión 15** | Autenticación Stateless con JSON Web Tokens (JWT) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion15.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion15/sesion15_laboratorio.ipynb) |
+| **Sesión 16** | OAuth2 Password Flow y Header Authorization Bearer | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion16.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion16/sesion16_laboratorio.ipynb) |
+| **Sesión 17** | Control de Acceso Basado en Roles (RBAC) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion17.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion17/sesion17_laboratorio.ipynb) |
+| **Sesión 18** | Rate Limiting, Throttling y Prevención de Abuso | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion18.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion18/sesion18_laboratorio.ipynb) |
+| **Sesión 19** | Sanitización de Entradas, Prevención de XSS e Inyecciones | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion19.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion19/sesion19_laboratorio.ipynb) |
+| **Sesión 20** | Hito 2: API con Inyección de Dependencias, Auth JWT y RBAC | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion20.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion20/sesion20_laboratorio.ipynb) |
+| **Sesión 21** | Fundamentos de Persistencia: SQLite / PostgreSQL y Drivers | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion21.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion21/sesion21_laboratorio.ipynb) |
+| **Sesión 22** | Modelado Relacional (1:1, 1:N, N:M) con ORMs | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion22.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion22/sesion22_laboratorio.ipynb) |
+| **Sesión 23** | Operaciones CRUD Transaccionales y Async Sessions | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion23.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion23/sesion23_laboratorio.ipynb) |
+| **Sesión 24** | Migraciones de Base de Datos con Alembic / Phinx | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion24.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion24/sesion24_laboratorio.ipynb) |
+| **Sesión 25** | Consultas Complejas, Joins y Carga Ansiosa (Eager Loading) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion25.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion25/sesion25_laboratorio.ipynb) |
+| **Sesión 26** | Transacciones ACID, Aislamiento y Rollback | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion26.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion26/sesion26_laboratorio.ipynb) |
+| **Sesión 27** | Blindaje OWASP: Prevención Total de SQL Injection (SQLi) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion27.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion27/sesion27_laboratorio.ipynb) |
+| **Sesión 28** | Blindaje Web: Cross-Origin Resource Sharing (CORS) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion28.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion28/sesion28_laboratorio.ipynb) |
+| **Sesión 29** | Protección Anti-CSRF y Cookies HttpOnly / SameSite | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion29.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion29/sesion29_laboratorio.ipynb) |
+| **Sesión 30** | Hito 3: API Persistente con ORM, Migraciones y Blindaje OWASP | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion30.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion30/sesion30_laboratorio.ipynb) |
+| **Sesión 31** | Contenedorización Básica con Docker y Dockerfiles | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion31.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion31/sesion31_laboratorio.ipynb) |
+| **Sesión 32** | Despliegue en la Nube (Render / Codespaces) y Env Vars | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion32.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion32/sesion32_laboratorio.ipynb) |
+| **Sesión 33** | Servidores ASGI / WSGI en Producción (Uvicorn / Nginx) | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion33.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion33/sesion33_laboratorio.ipynb) |
+| **Sesión 34** | Integración Frontend: Fetch API y JavaScript Asíncrono | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion34.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion34/sesion34_laboratorio.ipynb) |
+| **Sesión 35** | Renderizado Dinámico del DOM y Estado del Cliente | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion35.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion35/sesion35_laboratorio.ipynb) |
+| **Sesión 36** | Arquitectura Single Page Application (SPA) Ligera | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion36.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion36/sesion36_laboratorio.ipynb) |
+| **Sesión 37** | Pruebas Automatizadas E2E con Postman / Newman CLI | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion37.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion37/sesion37_laboratorio.ipynb) |
+| **Sesión 38** | Tareas en Segundo Plano (Background Tasks) Asíncronas | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion38.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion38/sesion38_laboratorio.ipynb) |
+| **Sesión 39** | Monitoreo, Métricas de Salud (/health) y Profiling Web | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion39.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion39/sesion39_laboratorio.ipynb) |
+| **Sesión 40** | Hito 4: Demostración API Full-Stack en Producción con SPA | [Ver Diapositivas](https://ijmarquezl.github.io/tecnm-desarrollo-web/presentaciones/sesion40.html) | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ijmarquezl/tecnm-desarrollo-web/blob/main/laboratorios/sesion40/sesion40_laboratorio.ipynb) |
 
 ---
 
-## 🛠️ Estructura del Repositorio
+## 📋 Criterios de Evaluación Oficial
+* **40% Laboratorios Diarios:** Cuadernos Colab ejecutados y bitácoras en GitHub.
+* **30% Proyecto Integrador:** API RESTful Full-Stack con persistencia y frontend (4 hitos).
+* **20% Evaluaciones Prácticas:** 4 hitos prácticos de unidad.
+* **10% Participación Activa:** Sesiones síncronas en MS Teams.
 
-```text
-├── auditorias/
-│   └── (Aquí guardarán los alumnos sus bitácoras completadas)
-├── plantillas/
-│   └── auditoria_sesion01.md     # Plantilla base para bitácora 01
-├── laboratorios/
-│   └── sesion01/
-│       └── sesion01_laboratorio.ipynb  # Práctica 01 con Servidor Embebido en Colab
-├── presentaciones/
-│   └── sesion01.html             # Diapositivas interactivas Sesión 01
-└── README.md                     # Portal de acceso e instrucciones
-```
-
-## 📋 Protocolo de Evaluación Diaria (60 Minutos)
-00–20 min: Estudio Inicial (Presentación interactiva en vivo y anatomía del protocolo).
-
-20–35 min: Fase 1: El Artesano (Implementación manual de endpoints sin IA).
-
-35–45 min: Fase 2: El Científico (Diseño del contrato OpenAPI/HTTP y Prompt C-R-E-O).
-
-45–55 min: Fase 3: El Auditor (Ejecución del Test Harness con peticiones HTTP automatizadas).
-
-55–60 min: Sincronización y commit a tu Fork personal.
-
-## 📄 Licencia
-El código fuente de los laboratorios y ejemplos se distribuye bajo la Licencia MIT.
-
-Las presentaciones interactivas y material didáctico están bajo licencia CC BY 4.0.
-
-Docente Titular: MCC. Iván Márquez Larios (ijmarquezl)
-
-Tecnológico Nacional de México — Campus Cancún
+---
+**Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)  
+**Tecnológico Nacional de México — Campus Cancún**

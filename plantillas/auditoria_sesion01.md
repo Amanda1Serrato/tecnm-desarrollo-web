@@ -1,58 +1,54 @@
 # Bitácora de Requerimientos y Auditoría IA — Sesión 01
 **Materia:** Desarrollo de Aplicaciones Web (DAB-2201)  
-**Estudiante:** [Nombre Completo del Alumno]  
+**Tema:** Encuadre, Diagnóstico HTTP y Servidor en Colab  
+**Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)  
+**Estudiante:** [Nombre Completo]  
 **Matrícula:** [No. de Control]  
-**Fecha:** [AAAA-MM-DD]  
-**Track Seleccionado:** [ Python/FastAPI | PHP 8+ ]  
+**Track:** [ Python/FastAPI | PHP 8+ ]  
 
 ---
 
-## 1. Fase 1: El Artesano (Diagnóstico Manual)
-*Describe qué dificultad encontraste al procesar el cuerpo JSON de la petición HTTP y validar datos a mano:*
-> (Ejemplo: En FastAPI tuve que recordar cómo configurar el modelo Pydantic para capturar campos requeridos, o en PHP decodificar `php://input` con `json_decode`).
+## 1. Fase 1: El Artesano (Dificultad Manual)
+*Reto:* Procesamiento manual de JSON de petición sin IA  
+*Describe qué dificultad encontraste al procesar la petición HTTP o validar campos a mano:*
+> 
 
 ---
 
-## 2. Fase 2: El Científico (Ingeniería de Requerimientos y Contexto C-R-E-O)
+## 2. Fase 2: El Científico (Ingeniería de Requerimientos C-R-E-O)
 
-### 2.1 Matriz de Especificación de Endpoint (Contrato OpenAPI)
-
-| Elemento C-R-E-O | Especificación Técnica Formal |
+### 2.1 Matriz de Especificación Formal (Contrato OpenAPI / DTO)
+| Elemento C-R-E-O | Definición Técnica |
 | :--- | :--- |
-| **Contexto (C)** | Framework FastAPI 0.110+ (Python 3.10+) o PHP 8.2 con servidor embebido. |
-| **Rol (R)** | Arquitecto de software senior especialista en seguridad y diseño de APIs RESTful. |
-| **Especificación (E)** | Endpoint `POST /api/saludo`, Payload JSON `{ "nombre": "str" }` validando longitud [3..50] caracteres. Respuestas semánticas: `200 OK`, `400 Bad Request` / `422 Unprocessable Entity`. |
-| **Output (O)** | Únicamente el bloque de código modular con esquemas de validación, sin texto introductorio innecesario. |
+| **Contexto (C)** | FastAPI 0.110+ (Python 3.10+) o PHP 8.2 con servidor embebido |
+| **Rol (R)** | Arquitecto de software senior especialista en APIs RESTful y Seguridad Web |
+| **Especificación (E)** | Contrato OpenAPI básico para endpoints POST |
+| **Output (O)** | Solo código modular, esquemas Pydantic/DTO y códigos HTTP semánticos |
 
-### 2.2 Diseño del Prompt Contextualizado
-*Pega el prompt formal que redactaste a partir de la matriz:*
-
+### 2.2 Prompt Estructurado
 ```text
-[Pega aquí tu prompt estructurado]
+[Pega aquí el prompt formal que redactaste para la IA]
 ```
-3. Código Devuelto por el Modelo
-Pega el fragmento de código retornado por el LLM:
 
-```Python
+---
 
-
-# Código generado por la IA (FastAPI o PHP)
+## 3. Código Devuelto por el Modelo
+```python
+# Código devuelto por el LLM
 ```
+
+---
 
 ## 4. Fase 3: El Auditor (Resultados del Test Harness HTTP)
-### 4.1 Batería de Pruebas de Códigos de Estado
-```text
-[ ] Petición con datos válidos: ¿Retorna código semántico 200 OK?
+*Pruebas ejecutadas:* Pruebas de códigos de estado HTTP 200, 400 y 422
 
-[ ] Nombre menor a 3 caracteres: ¿Rechaza la petición con código 400 o 422?
+* [ ] Respuestas semánticas correctas (`200 OK`, `201 Created`, `400 Bad Request`, `422 Unprocessable`).
+* [ ] No existen respuestas HTTP `500 Internal Server Error` no capturadas.
+* [ ] Encabezados `Content-Type: application/json` correctamente configurados.
 
-[ ] Campo vacío o espacios en blanco: ¿Dispara el error de validación esperado?
+### Reporte Crítico
+*¿Qué código de estado HTTP o falla de seguridad omitió la IA y cómo lo corregiste?*
+> 
 
-[ ] Payload mal formado / Ausente: ¿Maneja el error sin emitir una falla interna del servidor (500 Internal Server Error)?
-```
-### 4.2 Reporte Crítico
-*¿La IA devolvió códigos de estado semánticos adecuados o intentó retornar HTTP 200 con un JSON que decía "error": true? Justifica técnicamente.*
-
-(Documenta tu análisis y corrección aquí).
-
-Firma digital: [Usuario de GitHub]
+---
+**Firma digital:** [Usuario de GitHub]
