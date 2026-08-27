@@ -36,6 +36,7 @@ Repositorio oficial y entorno de laboratorio interactivo para el curso de **Desa
 ├── presentaciones/
 │   └── sesion01.html             # Diapositivas interactivas Sesión 01
 └── README.md                     # Portal de acceso e instrucciones
+```
 
 ## 📋 Protocolo de Evaluación Diaria (60 Minutos)
 00–20 min: Estudio Inicial (Presentación interactiva en vivo y anatomía del protocolo).
