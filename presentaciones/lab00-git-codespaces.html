@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Sesión 02: Taller de GitHub Codespaces, Ciclo Git y Métodos HTTP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Reveal.js CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/theme/dracula.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/monokai.css">
+  <style>
+    .reveal pre { box-shadow: none; font-size: 0.55em; width: 100%; }
+    .box { background: rgba(255,255,255,0.08); padding: 15px; border-radius: 8px; margin: 10px 0; }
+    .badge { background: #6272a4; color: #fff; padding: 2px 8px; border-radius: 4px; font-size: 0.8em; }
+    .accent { color: #50fa7b; font-weight: bold; }
+    .warn { color: #ff5555; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: Portada -->
+      <section>
+        <p class="badge">Desarrollo de Aplicaciones Web (AEB-1055)</p>
+        <h2>Sesión 02</h2>
+        <h3>GitHub Codespaces, el Ciclo Git y Métodos HTTP</h3>
+        <p><small>Prof. Iván José Márquez Larios &bull; TecNM Campus Cancún</small></p>
+      </section>
+
+      <!-- SLIDE 2: El Reto de la Infraestructura -->
+      <section>
+        <h3>Tu Entorno de Trabajo: Codespaces</h3>
+        <div class="box">
+          <p>Se acabaron los problemas de: <em>"En mi computadora no corre"</em> o <em>"No pude instalar Python"</em>.</p>
+        </div>
+        <ul>
+          <li><strong>Máquina Virtual Linux en la Nube:</strong> Contenedor Debian/Ubuntu completo.</li>
+          <li><strong>VS Code en tu Navegador:</strong> Mismo editor, mismas extensiones, cero configuración.</li>
+          <li><strong>Herramientas listas:</strong> Python 3, Git, Curl y terminal Bash integradas.</li>
+        </ul>
+      </section>
+
+      <!-- SLIDE 3: La Regla de Oro -->
+      <section>
+        <h3>Regla de Oro del Desarrollador</h3>
+        <div class="box" style="border-left: 5px solid #ff5555;">
+          <p class="warn">Si tu código solo está en tu Codespace, NO EXISTE.</p>
+        </div>
+        <p>Un Codespace puede cerrarse o borrarse por inactividad. El único lugar seguro y evaluable es tu <strong>repositorio en GitHub</strong>.</p>
+      </section>
+
+      <!-- SLIDE 4: La Metáfora Postal de Git -->
+      <section>
+        <h3>Cómo Funciona Git: La Metáfora Postal</h3>
+        <ol>
+          <li><strong>Working Directory:</strong> Tu mesa de trabajo (los archivos que editas en el editor).</li>
+          <li><strong>Staging Area (<code class="accent">git add</code>):</strong> Colocar los archivos dentro de la caja de envío.</li>
+          <li><strong>Commit (<code class="accent">git commit</code>):</strong> Sellar la caja y escribirle una etiqueta con la descripción exacta del contenido.</li>
+          <li><strong>Push (<code class="accent">git push</code>):</strong> El camión de mensajería que traslada la caja a GitHub.</li>
+        </ol>
+      </section>
+
+      <!-- SLIDE 5: La Secuencia Sagrada -->
+      <section>
+        <h3>Los 4 Comandos Esenciales</h3>
+        <pre><code class="bash">
+# 1. ¿Qué archivos modifiqué o creé?
+git status
+
+# 2. Preparar el archivo específico para el envío
+git add app_http_test.py
+
+# 3. Guardar el cambio con un mensaje claro
+git commit -m "feat: agrega soporte para metodo PATCH en el despachador"
+
+# 4. Enviar a tu repositorio en GitHub
+git push origin main
+        </code></pre>
+      </section>
+
+      <!-- SLIDE 6: Repaso Express de Métodos HTTP -->
+      <section>
+        <h3>Fundamento Web: Métodos HTTP</h3>
+        <table style="font-size: 0.65em; width: 100%;">
+          <thead>
+            <tr><th>Método</th><th>Acción</th><th>Idempotente</th><th>Ejemplo</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><code>GET</code></td><td>Consultar datos</td><td>Sí</td><td>Ver lista de usuarios</td></tr>
+            <tr><td><code>POST</code></td><td>Crear nuevo recurso</td><td>No</td><td>Registrar usuario nuevo</td></tr>
+            <tr><td><code>PUT</code></td><td>Reemplazar recurso completo</td><td>Sí</td><td>Actualizar todo el perfil</td></tr>
+            <tr><td><code>PATCH</code></td><td>Modificar parcialmente</td><td>No</td><td>Cambiar solo el correo</td></tr>
+            <tr><td><code>DELETE</code></td><td>Eliminar recurso</td><td>Sí</td><td>Borrar una publicación</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- SLIDE 7: El Reto de la Práctica Hoy -->
+      <section>
+        <h3>¿Qué Haremos Hoy en el Laboratorio?</h3>
+        <div class="box">
+          <ol style="font-size: 0.85em;">
+            <li>Abrir tu Codespace desde tu Fork personal.</li>
+            <li>Crear y ejecutar un script despachador HTTP en Python: <code>app_http_test.py</code>.</li>
+            <li>Modificarlo para añadir soporte a peticiones <code>PATCH</code>.</li>
+            <li>Ejecutar la secuencia Git (<code>add</code> $\rightarrow$ <code>commit</code> $\rightarrow$ <code>push</code>).</li>
+            <li>Comprobar tu commit visible en GitHub.</li>
+          </ol>
+        </div>
+        <p class="accent">&iexcl;Abran su terminal y vamos al Laboratorio 01!</p>
+      </section>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      plugins: [ RevealHighlight ]
+    });
+  </script>
+</body>
+</html>
