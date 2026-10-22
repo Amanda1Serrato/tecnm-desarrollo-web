@@ -79,3 +79,9 @@ Repositorio oficial y entorno de laboratorio interactivo para el curso de **Desa
 ---
 **Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)  
 **Tecnológico Nacional de México — Campus Cancún**
+
+## Mis datos, estudiante
+
+Nombre: Amanda Ideth Serrato Carmona
+Matricula: 23531056
+Unidad: La Pantera
