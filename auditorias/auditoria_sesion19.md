@@ -1,0 +1,122 @@
+# Bitácora de Requerimientos y Auditoría IA — Sesión 19
+**Materia:** Desarrollo de Aplicaciones Web (DAB-2201)  
+**Tema:** Sanitización de Entradas, Prevención de XSS e Inyecciones  
+**Docente Titular:** MCC. Iván Márquez Larios (`ijmarquezl`)  
+**Estudiante:** [Amanda Ideth Serrato Carmoma]  
+**Matrícula:** [23531056]  
+**Track:** [ Python/FastAPI | PHP 8+ ]  
+
+---
+
+## 1. Fase 1: El Artesano (Dificultad Manual)
+*Reto:* Limpieza manual de HTML y caracteres especiales  
+*Describe qué dificultad encontraste al procesar la petición HTTP o validar campos a mano:*
+> La dificultad que encontré fue identificar cuáles caracteres podían ser peligrosos dentro de un comentario y cómo convertirlos para evitar que se ejecutaran como código. También me costó entender cómo limpiar el contenido sin modificar los comentarios normales que escribía el usuario.
+
+---
+
+## 2. Fase 2: El Científico (Ingeniería de Requerimientos C-R-E-O)
+
+### 2.1 Matriz de Especificación Formal (Contrato OpenAPI / DTO)
+| Elemento C-R-E-O | Definición Técnica |
+| :--- | :--- |
+| **Contexto (C)** | Se utiliza Python con FastAPI y Pydantic en Google Colab. Se necesita crear una API que permita guardar y consultar comentarios de forma segura.|
+| **Rol (R)** | Actuar como un desarrollador especializado en seguridad de aplicaciones web y prevención de ataques XSS.|
+| **Especificación (E)** | Crear las rutas POST y GET para los comentarios. Recibir el texto del usuario, escapar los caracteres HTML peligrosos antes de guardarlos y devolver respuestas con los códigos HTTP 201 y 200. Los comentarios normales deben conservar su contenido. |
+| **Output (O)** | Entregar el archivo app.py completo y funcional, con los modelos, las rutas y la sanitización de los comentarios.|
+
+### 2.2 Prompt Estructurado
+```text
+[Actúa como un desarrollador experto en Python,
+FastAPI y seguridad de aplicaciones web.
+
+Necesito crear una API de comentarios que ayude
+a prevenir ataques XSS.
+
+Crea un archivo app.py que cumpla con lo siguiente:
+
+1. Utiliza FastAPI y Pydantic.
+2. Crea un modelo para recibir el texto del comentario.
+3. Implementa POST /api/comentarios para registrar
+   comentarios con respuesta HTTP 201.
+4. Utiliza la función escape() de Python para
+   convertir los caracteres HTML peligrosos.
+5. Implementa GET /api/comentarios para consultar
+   los comentarios con respuesta HTTP 200.
+6. Guarda los comentarios en una lista en memoria.
+7. Asigna un identificador consecutivo a cada comentario.
+8. Los comentarios normales deben conservar su contenido.
+9. Evita que las etiquetas script se devuelvan
+   como código HTML ejecutable.
+
+Entrega únicamente el código completo de app.py,
+organizado y con comentarios que expliquen su funcionamiento.]
+```
+
+---
+
+## 3. Código Devuelto por el Modelo
+```python
+
+%%writefile app.py
+from fastapi import FastAPI
+from pydantic import BaseModel, Field
+from html import escape
+
+app = FastAPI(title="API de Comentarios Seguros")
+
+# Modelo para recibir los comentarios
+class ComentarioEntrada(BaseModel):
+    texto: str = Field(min_length=1)
+
+# Lista para guardar los comentarios
+comentarios = []
+siguiente_id = 1
+
+# Registrar un comentario
+@app.post("/api/comentarios", status_code=201)
+def crear_comentario(datos: ComentarioEntrada):
+    global siguiente_id
+
+    # Escapar el contenido HTML para evitar ataques XSS
+    texto_seguro = escape(datos.texto)
+
+    comentario = {
+        "id": siguiente_id,
+        "texto": texto_seguro
+    }
+
+    comentarios.append(comentario)
+    siguiente_id += 1
+
+    return comentario
+
+# Consultar todos los comentarios
+@app.get("/api/comentarios")
+def listar_comentarios():
+    return {"comentarios": comentarios}
+==============================================================================
+VERIFICACIÓN DEL RESULTADO · 3 casos · app.py
+==============================================================================
+✅ 01. Un comentario normal se guarda
+✅ 02. El script se neutraliza
+✅ 03. El listado tampoco devuelve scripts
+------------------------------------------------------------------------------
+RESULTADO: 3/3 casos correctos. ¡Resultado logrado!
+```
+
+---
+
+## 4. Fase 3: El Auditor (Resultados del Test Harness HTTP)
+*Pruebas ejecutadas:* Pruebas de inyección de scripts en payloads
+
+* [x] Respuestas semánticas correctas (`200 OK`, `201 Created`, `400 Bad Request`, `422 Unprocessable`).
+* [x] No existen respuestas HTTP `500 Internal Server Error` no capturadas.
+* [x] Encabezados `Content-Type: application/json` correctamente configurados.
+
+### Reporte Crítico
+*¿Qué código de estado HTTP o falla de seguridad omitió la IA y cómo lo corregiste?*
+> La IA inicialmente no consideró completamente la protección contra ataques XSS.
+
+---
+**Firma digital:** [Amanda1Serrato]
